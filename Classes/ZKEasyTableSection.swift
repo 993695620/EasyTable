@@ -1,6 +1,6 @@
 //
-//  EasyTableSection.swift
-//  EasyTableView
+//  ZKEasyTableSection.swift
+//  ZKEasyTableView
 //
 //  Created by 虞政凯 on 2023/4/16.
 //
@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-public class EasyTableSection {
+public class ZKEasyTableSection {
     public var rows = [UITableViewCell]()
     public init() {}
 }

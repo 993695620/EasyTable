@@ -1,5 +1,5 @@
 #
-# Be sure to run `pod lib lint EasyTable.podspec' to ensure this is a
+# Be sure to run `pod lib lint ZKEasyTable.podspec' to ensure this is a
 # valid spec before submitting.
 #
 # Any lines starting with a # are optional, but their use is encouraged
@@ -7,7 +7,7 @@
 #
 
 Pod::Spec.new do |s|
-  s.name             = 'EasyTable'
+  s.name             = 'ZKEasyTable'
   s.version          = '1.0.0'
   s.summary          = '很容易创建一个UITableView表单'
   s.description      = <<-DESC
@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   s.homepage         = 'https://www.jianshu.com/u/621c3854d9d4'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'yuzhengkai' => '18311132469@163.com' }
-  s.source           = { :git => 'https://github.com/993695620/EasyTable.git', :tag => '1.0.0' }
+  s.source           = { :git => 'https://github.com/993695620/ZKEasyTable.git', :tag => '1.0.0' }
   s.swift_version = '5.0'
   s.ios.deployment_target = '11.0'
   s.source_files = 'Classes/**/*.{swift}'

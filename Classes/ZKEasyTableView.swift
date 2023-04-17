@@ -1,6 +1,6 @@
 //
-//  EasyTableView.swift
-//  EasyTableView
+//  ZKEasyTableView.swift
+//  ZKEasyTableView
 //
 //  Created by 虞政凯 on 2023/4/16.
 //
@@ -11,7 +11,7 @@ import UIKit
 
 extension UITableView: EasyProtocol {}
 
-public class EasyTableView<T>: EasyProtocol {
+public class ZKEasyTableView<T>: EasyProtocol {
     
     let t: T
     required init(_ t: T) {
@@ -27,12 +27,12 @@ public protocol EasyProtocol {
 
 extension EasyProtocol {
     
-    public var zk: EasyTableView<Self> {
-        return EasyTableView(self)
+    public var zk: ZKEasyTableView<Self> {
+        return ZKEasyTableView(self)
     }
     
-    public static var zk: EasyTableView<Self>.Type {
-        return EasyTableView.self
+    public static var zk: ZKEasyTableView<Self>.Type {
+        return ZKEasyTableView.self
     }
 }
 
@@ -42,7 +42,7 @@ fileprivate struct TableViewKeys {
     static var selectRowAt = "SelectRowAt"
 }
 
-extension EasyTableView where T: UITableView {
+extension ZKEasyTableView where T: UITableView {
     
     typealias SelectRowAt = (UITableViewCell, IndexPath) -> Void
     
@@ -50,10 +50,10 @@ extension EasyTableView where T: UITableView {
     public var sections: [EasyTableSection] {
         
         get {
-            if let sections = objc_getAssociatedObject(t, &TableViewKeys.sectionKey) as? [EasyTableSection] {
+            if let sections = objc_getAssociatedObject(t, &TableViewKeys.sectionKey) as? [ZKEasyTableSection] {
                 return sections
             }
-            return [EasyTableSection]()
+            return [ZKEasyTableSection]()
         }
         
         set {
@@ -77,12 +77,12 @@ extension EasyTableView where T: UITableView {
         }
     }
     
-    private var tableCore: EasyTableViewCore {
+    private var tableCore: ZKEasyTableViewCore {
         get {
-            if let core = objc_getAssociatedObject(t, TableViewKeys.tableCoreKey) as? EasyTableViewCore {
+            if let core = objc_getAssociatedObject(t, TableViewKeys.tableCoreKey) as? ZKEasyTableViewCore {
                 return core
             }
-            let core = EasyTableViewCore()
+            let core = ZKEasyTableViewCore()
             self.tableCore = core
             return core
         }
