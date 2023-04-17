@@ -47,7 +47,7 @@ extension ZKEasyTableView where T: UITableView {
     typealias SelectRowAt = (UITableViewCell, IndexPath) -> Void
     
     //MARK: Cell分组
-    public var sections: [EasyTableSection] {
+    public var sections: [ZKEasyTableSection] {
         
         get {
             if let sections = objc_getAssociatedObject(t, &TableViewKeys.sectionKey) as? [ZKEasyTableSection] {
