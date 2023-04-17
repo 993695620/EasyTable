@@ -9,11 +9,11 @@
 Pod::Spec.new do |s|
   s.name             = 'EasyTable'
   s.version          = '1.0.0'
-  s.summary          = 'A short description of EasyTable.'
+  s.summary          = '很容易创建一个UITableView表单'
   s.description      = <<-DESC
-  非常容易得创建TABLE表单
+  在使用UITableView写表单的时候由于Cell各种样式，需要各种判断非常的麻烦，我就实现了一个简单的创建表单，只需要关心数据源
                        DESC
-  s.homepage         = 'https://github.com/yuzhengkai/EasyTable'
+  s.homepage         = 'https://www.jianshu.com/u/621c3854d9d4'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'yuzhengkai' => '18311132469@163.com' }
   s.source           = { :git => 'https://github.com/yuzhengkai/EasyTable.git', :tag => '1.0.0' }
