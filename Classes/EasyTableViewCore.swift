@@ -28,6 +28,14 @@ extension EasyTableViewCore: UITableViewDataSource {
         let cell = tableView.zk.sections[indexPath.section].rows[indexPath.row]
         tableView.zk.didSelectRowAt?(cell, indexPath)
     }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        return tableView.zk.sections[section].viewForHeaderInSection?()
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return tableView.zk.sections[section].heightForHeaderInSection?() ?? 0
+    }
 }
 
 extension EasyTableViewCore: UITableViewDelegate {

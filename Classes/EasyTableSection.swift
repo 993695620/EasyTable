@@ -10,5 +10,7 @@ import UIKit
 
 public class EasyTableSection {
     public var rows = [UITableViewCell]()
+    public var viewForHeaderInSection: (() -> UIView?)?
+    public var heightForHeaderInSection: (() -> CGFloat)?
     public init() {}
 }
