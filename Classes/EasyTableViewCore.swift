@@ -1,15 +1,15 @@
 //
-//  ZKEasyTableViewCore.swift
-//  ZKEasyTableView
+//  EasyTableViewCore.swift
+//  EasyTableView
 //
 //  Created by 虞政凯 on 2023/4/15.
 //
 
 import UIKit
 
-class ZKEasyTableViewCore: NSObject {}
+class EasyTableViewCore: NSObject {}
 
-extension ZKEasyTableViewCore: UITableViewDataSource {
+extension EasyTableViewCore: UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return tableView.zk.sections.count
@@ -30,6 +30,6 @@ extension ZKEasyTableViewCore: UITableViewDataSource {
     }
 }
 
-extension ZKEasyTableViewCore: UITableViewDelegate {
+extension EasyTableViewCore: UITableViewDelegate {
     
 }
